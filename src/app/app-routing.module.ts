@@ -17,6 +17,10 @@ const routes: Routes = [
     path: 'contact',
     component: ContactComponent,
   },
+{
+  path: 'posts',
+  loadChildren: () => import('./pages/posts/posts.module').then( m => m.PostsModule)
+},
   {
     path: '**',
     redirectTo: 'home',
